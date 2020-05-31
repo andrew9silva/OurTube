@@ -2,7 +2,8 @@ class Api::V1::VideosController < ApplicationController
 
     def index
         videos = Video.all 
-        render json: videos
+        #render json: videos
+        render json: VideoSerializer.new(videos)
     end
 
     def create
