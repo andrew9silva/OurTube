@@ -6,6 +6,10 @@ class Api::V1::VideosController < ApplicationController
         render json: VideoSerializer.new(videos)
     end
 
+    def new
+        video = Video.new
+    end
+
     def create
         video = Video.new(video_params)
         if video.save
@@ -17,8 +21,7 @@ class Api::V1::VideosController < ApplicationController
 
     private
 
-    def video_params
-        
+    def video_params 
         params.require(:video).permit(:title, :url, :description, :user_id)
     end
 end
