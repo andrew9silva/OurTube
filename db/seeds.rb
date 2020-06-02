@@ -7,4 +7,4 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 user = User.create(username: "test", email: "test@test.com", password_digest: "password")
-Video.create(title: "Test Video", url: "https://www.youtube.com/watch?v=2xvuGWI3H58&feature=youtu.be", description: "I hope this works.", user_id: user.id)
+Video.create(title: "Test Video", youtube_id: "C_n1R_Sfl3w", description: "I hope this works.", user_id: user.id)

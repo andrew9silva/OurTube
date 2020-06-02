@@ -1,4 +1,4 @@
 class VideoSerializer
   include FastJsonapi::ObjectSerializer
-  attributes :title, :description, :url, :user_id
+  attributes :title, :description, :youtube_id, :user_id
 end
