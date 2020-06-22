@@ -1,8 +1,9 @@
 class Api::V1::CommentsController < ApplicationController
 
     def index 
-        comment = Comment.all 
-        render json: CommentSerializer.new(comment)
+        #comments = Comment.where(video_id: video_id)
+        comments = Comment.all
+        render json: CommentSerializer.new(comments)
     end
 
     def new 
